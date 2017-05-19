@@ -8,10 +8,10 @@
 
 #import "RCTWeChat.h"
 #import "WXApiObject.h"
-#import <React/RCTEventDispatcher.h>
-#import <React/RCTBridge.h>
-#import <React/RCTLog.h>
-#import <React/RCTImageLoader.h>
+#import "RCTEventDispatcher.h"
+#import "RCTBridge.h"
+#import "RCTLog.h"
+#import "RCTImageLoader.h"
 
 // Define error messages
 #define NOT_REGISTERED (@"registerApp required.")

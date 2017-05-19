@@ -20,8 +20,11 @@
   "dependencies": {
     "events": "1.0.2"
   },
+	"devDependencies": {
+    "react-native": ">=0.35 <0.40"
+	},
   "peerDependencies": {
-    "react-native": ">=0.40"
+    "react-native": ">=0.35 <0.40"
   },
   "author": "Yorkie Liu <yorkiefixer@gmail.com>",
   "contributors": [
@@ -32,7 +35,11 @@
     {
       "name": "Deng Yun",
       "email": "tdzl2003@gmail.com"
-    }
+    },
+		{
+			"name": "David Kuo",
+			"email": "me@davy.tw"
+		}
   ],
   "license": "MIT",
   "bugs": {
