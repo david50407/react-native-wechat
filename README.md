@@ -8,7 +8,6 @@
   - [Linking Android with Gradle](#linking-android-with-gradle)
 - [API Documentation](#api-documentation)
   - [`registerApp(appid)`](#registerappappid)
-  - [`registerAppWithDescription(appid, appdesc)`](#registerappappid)
   - [`isWXAppInstalled()`](#iswxappinstalled)
   - [`isWXAppSupportApi()`](#iswxappsupportapi)
   - [`getApiVersion()`](#iswxappsupportapi)
@@ -208,14 +207,6 @@ You should call this function in global, calling over twice would throw an error
   ```
 
 - {String} `appid` the appid you get from WeChat dashboard
-- returns {Promise} 
-
-#### registerAppWithDescription(appid, appdesc)
-
-Only available on iOS.
-
-- {String} `appid` the appid you get from WeChat dashboard
-- {String} `appdesc` the description of your app
 - returns {Promise} 
 
 #### isWXAppInstalled() 
