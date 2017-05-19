@@ -77,13 +77,16 @@ your app project, _if there is something that not working, please check the list
 - Code the following in `AppDelegate.m` of your project to enable [LinkingIOS]
 
     ```objective-c
-    #import "../Libraries/LinkingIOS/RCTLinkingManager.h"
+    #import "RCTPushNotificationManager.h"
+    #import "RCTWeChat.h"
     
     - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
     sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
     {
-      return [RCTLinkingManager application:application openURL:url
-                                sourceApplication:sourceApplication annotation:annotation];
+        [[NSNotificationCenter defaultCenter] postNotificationName:RCTWXNotificationOpenUrl
+																														object:nil
+																													userInfo:@{@"url":url}];
+        return YES;
     }
     ```
 

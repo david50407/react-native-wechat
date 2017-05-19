@@ -30,6 +30,8 @@
 
 #define RCTWXEventName @"WeChat_Resp"
 
+#define RCTWXNotificationOpenUrl @"RCTWXNotificationOpenUrl"
+
 @interface RCTWeChat : NSObject <RCTBridgeModule, WXApiDelegate>
 
 @property NSString* appId;

@@ -27,7 +27,10 @@ RCT_EXPORT_MODULE()
 {
     self = [super init];
     if (self) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleOpenURL:) name:@"RCTOpenURLNotification" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(handleOpenURL:)
+                                                     name:RCTWXNotificationOpenUrl
+                                                   object:nil];
     }
     return self;
 }
@@ -37,12 +40,11 @@ RCT_EXPORT_MODULE()
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (BOOL)handleOpenURL:(NSNotification *)aNotification
+- (BOOL)handleOpenURL:(NSNotification *)notification
 {
-    NSString * aURLString =  [aNotification userInfo][@"url"];
-    NSURL * aURL = [NSURL URLWithString:aURLString];
+    NSURL * url = [notification.userInfo valueForKey:@"url"];
 
-    if ([WXApi handleOpenURL:aURL delegate:self])
+    if (url && [WXApi handleOpenURL:url delegate:self])
     {
         return YES;
     } else {
