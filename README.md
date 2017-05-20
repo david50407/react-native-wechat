@@ -84,8 +84,8 @@ your app project, _if there is something that not working, please check the list
     sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
     {
         [[NSNotificationCenter defaultCenter] postNotificationName:RCTWXNotificationOpenUrl
-																														object:nil
-																													userInfo:@{@"url":url}];
+                                                            object:nil
+                                                          userInfo:@{@"url":url}];
         return YES;
     }
     ```
